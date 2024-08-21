@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "trip_planner"
+version = "0.1.0"
+description = "trip_planner using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = "^0.51.0" }
+
+[tool.poetry.scripts]
+trip_planner = "trip_planner.main:run"
+run_crew = "trip_planner.main:run"
+train = "trip_planner.main:train"
+replay = "trip_planner.main:replay"
+test = "trip_planner.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
